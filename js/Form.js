@@ -36,6 +36,7 @@ class Form {
 		this.resetButton.mousePressed(() => {
 			player.updateCount(0);
 			game.update('Lobby');
+			Player.updateCarsAtEnd(0);
 			location.reload();
 		});
 	}

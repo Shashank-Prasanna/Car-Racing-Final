@@ -7,6 +7,7 @@ var distance = 0;
 var database;
 
 var form, player, game;
+var music;
 
 var cars, car1, car2, car3, car4;
 var image1, image2, image3, image4, imageTrack, imageGround;
@@ -18,6 +19,8 @@ function preload() {
 	image4 = loadImage('images/car4.png');
 	imageTrack = loadImage('images/track.jpg');
 	imageGround = loadImage('images/ground.png');
+
+	music = loadSound('Music.mp3');
 }
 
 function setup() {
@@ -26,6 +29,7 @@ function setup() {
 	game = new Game();
 	game.getState();
 	game.start();
+	music.play(-1);
 }
 
 function draw() {
